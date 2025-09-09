@@ -46,7 +46,9 @@
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
     
-    
+.maisrecentes{
+    margin-bottom: 4rem;
+}
 .video-card1 iframe {
     width: 100%;
     height: 200px;
@@ -63,12 +65,20 @@
 }
     
     
-.video-card:hover {
+.video-card1:hover {
     transform: scale(1.1);
     z-index: 2;
 }
-    
-    
-.carousel:hover .video-card:not(:hover) {
+
+.carousel:hover .video-card1:not(:hover) {
+    opacity: 0.4;
+}
+
+.video-card2:hover {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.carousel:hover .video-card2:not(:hover) {
     opacity: 0.4;
 }
