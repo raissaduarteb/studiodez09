@@ -398,8 +398,3 @@ footer{
         padding-left: 6rem;
     }
 }
-@media (max-width: 451px) {
-    .content2::before{
-        /* height: 53rem; */
-    }
-}
