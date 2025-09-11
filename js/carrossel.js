@@ -45,5 +45,5 @@ function criarCarrossel(carouselSelector, cardSelector, intervalTime = 2000, qty
 // Chamando a função para cada carrossel
 function onYouTubeIframeAPIReady() {
     criarCarrossel('.carousel1', '.video-card1', 2000, 3);
-    criarCarrossel('.carousel2', '.video-card2', 2000, 6);
+    criarCarrossel('.carousel2', '.video-card2', 3000, 6);
 }

@@ -46,8 +46,8 @@
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
     
-.maisrecentes{
-    margin-bottom: 4rem;
+.maisrecentes, .recorrentes{
+    padding-bottom: 10rem;
 }
 .video-card1 iframe {
     width: 100%;
