@@ -378,13 +378,18 @@ footer{
     }
     .responsive-titulo2{
         font-size: 2rem;
+        margin-top: 1rem;
+
     }
     .responsive-parag1{
         margin-left: 17vw;
         margin-top: 2vh;
+        font-size: 0.9rem;
     }
     .responsive-parag2{
         margin-top: 2vh;
+        font-size: 0.9rem;
+
     }
 
     .text-content2{
