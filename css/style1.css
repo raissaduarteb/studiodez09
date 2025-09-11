@@ -153,14 +153,16 @@ body{
     background-color: #DDDDDD; 
     z-index: 0;
 }
-.sobre, .content1{
-    margin: 0 8vw 22rem 8vw;
+.sobre{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 4vw;
     position: relative;
     z-index: 1;
+}
+.content1{
+    margin: 0 8vw 22rem 8vw;
 }
 .content2{
     flex-direction: row-reverse;
@@ -340,27 +342,59 @@ footer{
 
 
 @media (max-width: 700px) {
-    .content1{
+    .content1, .content2{
         flex-direction: column;
         margin-bottom: 12rem;
+    }
+    .content2{
+        justify-content: right;
+        position: relative;
+        right: 0;
     }
     .content::before{
         top: 10vh;
         width: 20vw;
         height: 53rem;
     }
-    
-    .img1{
-    width: 100%;
-    height: 50vh;
+    .content2::before{
+        content: "";
+        float: right;
+        width: 100%;
+        height: 49rem;
+        top: 19vh;
+        background-color: #dddddd;
+        position: absolute;
+        z-index: -1;
+        right: -4rem;
+    }
+
+    .img1, .img2{
+        width: 100%;
+        height: 50vh;
     }
     .responsive-titulo1{
         margin-left: 17vw;
         margin-top: 1rem;
+    }
+    .responsive-titulo2{
         font-size: 2rem;
     }
     .responsive-parag1{
         margin-left: 17vw;
         margin-top: 2vh;
+    }
+    .responsive-parag2{
+        margin-top: 2vh;
+    }
+
+    .text-content2{
+        text-align: right;
+        width: 100%;    
+        padding-left: 6rem;
+    }
+}
+@media (max-width: 451px) {
+    .content2::before{
+        height: 53rem;
     }
 }
