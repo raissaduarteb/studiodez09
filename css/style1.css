@@ -12,6 +12,9 @@ body{
     font-family: 'Inter', sans-serif;
     background-size:10rem;
 }
+html, body {
+    overflow-x: hidden; /* bloqueia rolagem lateral */
+  }
 a{
     color: inherit;
     text-decoration: none;
