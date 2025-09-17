@@ -294,7 +294,7 @@ body{
     flex-direction: row;
     overflow-x: auto;   /* ativa o scroll horizontal */
     scroll-snap-type: x mandatory; /* deslize suave */
-    /* gap: 1rem; */
+    gap: 1rem;
     transition: 4s;
 
 }
