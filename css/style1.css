@@ -430,14 +430,15 @@ footer{
 
     .img1, .img2{
         width: 100%;
-        height: 50vh;
+        height: 30vh;
     }
     .responsive-titulo1{
         margin-left: 17vw;
         margin-top: 1rem;
+        font-size: 1.9rem;
     }
     .responsive-titulo2{
-        font-size: 2rem;
+        font-size: 1.9rem;
         margin-top: 1rem;
 
     }
@@ -504,8 +505,15 @@ footer{
         margin-top: 0;
         gap: 0.5rem;
     }
+    .footer-middle-icon a{
+        width: 30px;
+        height: 30px;
+    }
+    .footer-text{
+        font-size: 0.6rem;
+    }
     footer{
-        padding-inline: 10vw;
+        padding-inline: 8vw;
     }
   }
   @media (max-width: 500px) {
@@ -515,6 +523,6 @@ footer{
   }
   @media (max-width: 423px) {
     .clients-titulo{
-        font-size: 2.2rem;
+        font-size: 1.9rem;
     }
   }
