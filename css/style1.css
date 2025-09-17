@@ -504,6 +504,9 @@ footer{
         margin-top: 0;
         gap: 0.5rem;
     }
+    footer{
+        padding-inline: 10vw;
+    }
   }
   @media (max-width: 500px) {
     .clients-content iframe {
