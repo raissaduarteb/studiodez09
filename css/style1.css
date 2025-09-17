@@ -488,7 +488,7 @@ footer{
 @media (max-width: 800px) {
     .clients-content iframe {
       width: 25%; /* 4 vídeos ocupando 100% */
-      height: 28vh;
+      height: 34vh;
     }
   }
   
@@ -496,6 +496,13 @@ footer{
   @media (max-width: 600px) {
     .clients-content iframe {
       width: 33.33%; /* 3 vídeos ocupando 100% */
+    }
+    .nosacompanhe{
+        display: none;
+    }
+    .footer-middle-icon {
+        margin-top: 0;
+        gap: 0.5rem;
     }
   }
   @media (max-width: 500px) {
@@ -506,6 +513,5 @@ footer{
   @media (max-width: 423px) {
     .clients-titulo{
         font-size: 2.2rem;
-
     }
   }
