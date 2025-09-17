@@ -494,3 +494,8 @@ footer{
       width: 33.33%; /* 3 vídeos ocupando 100% */
     }
   }
+  @media (max-width: 500px) {
+    .clients-content iframe {
+        width: 50%; /* 2 vídeos ocupando 100% */
+      }
+  }
