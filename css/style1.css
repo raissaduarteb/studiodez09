@@ -172,6 +172,7 @@ body{
     height: 46%;
     background-color: #DDDDDD; 
     z-index: 0;
+    background: linear-gradient(#1A1818 2%, #DDDDDD 7%,#DDDDDD 93%, #1A1818 98%);
 }
 .sobre{
     display: flex;
@@ -426,6 +427,8 @@ footer{
         position: absolute;
         z-index: -1;
         right: -4rem;
+        background: linear-gradient(#1A1818 2%, #DDDDDD 7%,#DDDDDD 93%, #1A1818 98%);
+
     }
 
     .img1, .img2{
