@@ -169,7 +169,7 @@ body{
     top: 16vh;
     left: 0;
     width: 51%;
-    height: 50%;
+    height: 46%;
     background-color: #DDDDDD; 
     z-index: 0;
 }
@@ -385,6 +385,11 @@ footer{
         width: 70%;
     }
 }
+@media (max-width: 867px) {
+    .content::before{
+        height: 52%;
+    }
+}
 
 @media (max-width: 700px) {
    
@@ -406,7 +411,7 @@ footer{
         content: "";
         float: right;
         width: 100%;
-        height: 40rem;
+        height: 45rem;
         top: 19vh;
         background-color: #dddddd;
         position: absolute;
@@ -430,11 +435,11 @@ footer{
     .responsive-parag1{
         margin-left: 17vw;
         margin-top: 2vh;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
     .responsive-parag2{
         margin-top: 2vh;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
 
     }
 
@@ -451,5 +456,9 @@ footer{
     .titulo-parag{
         font-size: 0.8rem;
 
+    }
+    .videodestaque iframe{
+        height: 34vh;
+        width: 80%;
     }
 }
