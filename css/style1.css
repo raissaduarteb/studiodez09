@@ -250,7 +250,7 @@ body{
 
 .legendavideo{
     background-color:#1B1919;
-    width: 55%;
+    width: 59%;
     height: 40vh;
     bottom: 0;
     position: absolute;
@@ -260,7 +260,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center; /* centraliza verticalmente o texto */
-    padding: 9rem 8vw 1rem 2rem;
+    padding: 4rem 8vw 1rem 2rem;
     top: 20rem;
 }
 .peq-p{
@@ -499,14 +499,13 @@ footer{
         width: 75%;
         height: 35vh;
         top: 12rem;
-        padding-top: 7rem;
     }
     .peq-p{
         font-size: 0.8rem;
     
     }
     .peq-t{
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 }
 @media (max-width: 800px) {
