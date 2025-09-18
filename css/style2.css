@@ -5,7 +5,7 @@
 .text-header{
     text-align: left;
     margin-inline: 8vw;
-    padding-top: 8rem;
+    padding-top: 5rem;
 }
 .content{
     background-color: #1B1919;
@@ -83,3 +83,10 @@
 .carousel:hover .video-card2:not(:hover) {
     opacity: 0.4;
 }
+
+@media (max-width: 600px) {
+    .proj-text{
+        font-size: 1.5rem;
+    }
+}
+
