@@ -42,13 +42,30 @@
 }
 
 .video-card2 {
-    flex: 0 0 16.66%; /* 6 vídeos por vez */
+    flex: 0 0 auto; /* impede de encolher */
+    height: 60vh;
+    scroll-snap-align: start;
+    width: 20%; /* 5 vídeos lado a lado */
     padding-inline: 5px;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
     
 .maisrecentes, .recorrentes{
     padding-bottom: 10rem;
+}
+.recorrentes-top, .maisrecentes-top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2vh;
+}
+.setas{
+    display: flex;
+}
+.setas svg{
+    color: white;
+
 }
 .video-card1 iframe {
     width: 100%;

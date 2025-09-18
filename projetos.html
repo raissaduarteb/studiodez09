@@ -23,7 +23,17 @@
         </div>
         <div class="content">
             <div class="maisrecentes">
-                <h1 class="titulo white-titulo proj-text">MAIS RECENTES</h1>
+                <div class="maisrecentes-top">
+                    <h1 class="titulo white-titulo proj-text">MAIS RECENTES</h1>
+                    <div class="setas" id="setas">
+                        <svg xmlns=http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                        </svg>
+                    </div>
+                </div>
                 <div class="carousel carousel1">
                     <div class="carousel-track">
                         <div class="video-card1"><iframe id="player1" src="https://www.youtube.com/embed/YYok-cr4OVg?enablejsapi=1" allowfullscreen></iframe></div>
@@ -38,7 +48,17 @@
                 </div>
             </div>
             <div class="recorrentes">
-                <h1 class="titulo white-titulo proj-text">RECORRENTES</h1>
+                <div class="recorrentes-top">
+                    <h1 class="titulo white-titulo proj-text">RECORRENTES</h1>
+                    <div class="setas" id="setas">
+                        <svg xmlns=http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                        </svg>
+                    </div>
+                </div>
                 <div class="carousel carousel2">
                     <div class="carousel-track">
                         <div class="video-card2"><iframe id="player9"src="https://www.youtube.com/embed/u5KBzsJuAe0?controls=0&modestbranding=1&rel=0&showinfo=0" title="YouTube video player" frameborder="0"allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe></div>
@@ -60,5 +80,6 @@
     <script src="./js/script.js"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="./js/carrossel.js"></script>
+    <script src="./js/setas.js"></script>
 </body>
 </html>

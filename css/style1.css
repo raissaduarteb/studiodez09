@@ -278,14 +278,14 @@ body{
     background-color: #E7E7E7;
     margin: 18rem 8vw 10rem 8vw;
 }
-.clients-content iframe{
+.carousel-track iframe{
     flex: 0 0 auto;    /* impede de encolher */
     height: 60vh;
     scroll-snap-align: start;
     width: 19%; /* 5 vídeos lado a lado */
 
 }
-.clients-content{
+.carousel-track{
     display: flex;
     flex-direction: row;
     overflow-x: auto;   /* ativa o scroll horizontal */
@@ -294,17 +294,17 @@ body{
     transition: 4s;
     scrollbar-width: none;   /* Firefox */
 }
-.clients-content::-webkit-scrollbar {
+.carousel-track::-webkit-scrollbar {
     display: none;           /* Chrome, Safari */
 }
 
 
-.clients-content:hover .video-card1 {
+.carousel-track:hover .video-card1 {
     filter: brightness(0.3);
     transition: opacity 0.3s;
   }
   
-  .clients-content .video-card1:hover {
+  .carousel-track .video-card1:hover {
     filter: brightness(1);
     transform: scale(1.05);
     z-index: 2;
@@ -509,7 +509,7 @@ footer{
     }
 }
 @media (max-width: 800px) {
-    .clients-content iframe {
+    .carousel-track iframe {
       width: 25%; /* 4 vídeos ocupando 100% */
       height: 34vh;
     }
@@ -520,7 +520,7 @@ footer{
   
   /* Até 600px → cabem 3 vídeos */
   @media (max-width: 600px) {
-    .clients-content iframe {
+    .carousel-track iframe {
       width: 33.33%; /* 3 vídeos ocupando 100% */
     }
     .nosacompanhe{
@@ -545,7 +545,7 @@ footer{
     }
   }
   @media (max-width: 500px) {
-    .clients-content iframe {
+    .carousel-track iframe {
         width: 50%; /* 2 vídeos ocupando 100% */
       }
     .clients-top{

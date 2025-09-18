@@ -1,4 +1,4 @@
-const content = document.querySelector('.clients-content');
+const content = document.querySelector('.carousel-track');
   const setas = document.querySelectorAll('.setas svg');
   console.log(setas)
 
