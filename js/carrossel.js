@@ -45,6 +45,29 @@ function criarCarrossel(carouselSelector, cardSelector, intervalTime = 2000, qty
             }
         });
     });
+
+    const divSetas = document.querySelectorAll('.setas');
+
+    divSetas.forEach(divSeta => {
+        const attrFor = divSeta.getAttribute(`for`);
+
+        if (`.${attrFor}` == carouselSelector) {
+            const setas = divSeta.querySelectorAll(`svg`);
+
+            setas[0].addEventListener('click', () => {
+                track.scrollBy({ left: -track.clientWidth, behavior: 'smooth' });
+                console.log(intervaloCarrossel)
+                clearInterval(intervaloCarrossel);
+                setTimeout(() => { intervaloCarrossel = setInterval(slide, intervalTime) }, 10000); 
+            });
+
+            setas[1].addEventListener('click', () => {
+                track.scrollBy({ left: track.clientWidth, behavior: 'smooth' });
+                clearInterval(intervaloCarrossel);
+                setTimeout(() => { intervaloCarrossel = setInterval(slide, intervalTime) }, 10000); 
+            });
+        }
+    });
 }
 
 // Chamando a função para cada carrossel
