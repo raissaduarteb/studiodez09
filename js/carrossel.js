@@ -2,6 +2,7 @@ function criarCarrossel(carouselSelector, cardSelector, intervalTime = 2000, qty
     const track = document.querySelector(`${carouselSelector} .carousel-track`);
     const cards = document.querySelectorAll(`${carouselSelector} ${cardSelector}`);
     const cardWidth = cards[0].offsetWidth;
+    console.log(cardWidth);
     let index = 0;
     let videoTocando = false;
     let intervaloCarrossel = setInterval(slide, intervalTime);
@@ -44,6 +45,6 @@ function criarCarrossel(carouselSelector, cardSelector, intervalTime = 2000, qty
 
 // Chamando a função para cada carrossel
 function onYouTubeIframeAPIReady() {
-    criarCarrossel('.carousel1', '.video-card1', 2000, 3);
+    // criarCarrossel('.carousel1', '.video-card1', 2000, 3);
     criarCarrossel('.carousel2', '.video-card2', 3000, 5);
 }

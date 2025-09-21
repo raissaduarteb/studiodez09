@@ -9,7 +9,7 @@
 }
 
 body{
-    font-family: 'Inter', sans-serif;
+    font-family: 'Maven Pro', sans-serif;
     background-size:10rem;
 }
 html, body {
@@ -251,7 +251,7 @@ body{
 .legendavideo{
     background-color:#1B1919;
     width: 59%;
-    height: 40vh;
+    height: 36vh;
     bottom: 0;
     position: absolute;
     right: 0;         /* encosta na direita */
@@ -259,9 +259,9 @@ body{
     z-index: 1;       /* fica atrás do vídeo */
     display: flex;
     flex-direction: column;
-    justify-content: center; /* centraliza verticalmente o texto */
-    padding: 4rem 8vw 1rem 2rem;
-    top: 20rem;
+    justify-content: flex-end; /* centraliza verticalmente o texto */
+    padding: 4rem 8vw 2rem 2rem;
+    top: 21rem;
 }
 .peq-p{
     margin: 0;
@@ -497,7 +497,7 @@ footer{
     }
     .legendavideo{
         width: 75%;
-        height: 35vh;
+        height: 31vh;
         top: 12rem;
     }
     .peq-p{

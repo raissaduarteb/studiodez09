@@ -28,7 +28,9 @@
     width: 100%;
     position: relative;
 }
-    
+.carousel-track{
+    overflow-x:unset;
+}
     
 .carousel-track {
     display: flex;
@@ -37,7 +39,7 @@
      
 .video-card1 {
     flex: 0 0 33.33%; /* 3 vídeos por vez */
-    padding-inline: 5px;
+    /* padding-inline: 5px; */
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
