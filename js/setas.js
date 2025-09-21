@@ -10,10 +10,21 @@ divSetas.forEach(divSeta => {
   const setas = divSeta.querySelectorAll(`svg`);
 
   setas[0].addEventListener('click', () => {
-    carousel.scrollBy({ left: -(cardWidth * 2), behavior: 'smooth' });
+    if(content.offsetWidth > `400`) {
+      carousel.scrollBy({ left: -(cardWidth * 2), behavior: 'smooth' });
+    }
+    else {
+      carousel.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+    }
+    
   });
   
   setas[1].addEventListener('click', () => {
-    carousel.scrollBy({ left: cardWidth * 2, behavior: 'smooth' });
+    if(content.offsetWidth > `400`) {
+      carousel.scrollBy({ left: (cardWidth * 2), behavior: 'smooth' });
+    }
+    else {
+      carousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    }
   });
 });

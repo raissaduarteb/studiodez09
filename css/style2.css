@@ -108,5 +108,19 @@
     .text-header{
         padding-top: 2rem;
     }
+    .video-card1 {
+        flex: 0 0 60%; /* 3 vídeos por vez */
+        /* padding-inline: 5px; */
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .video-card2 {
+        flex: 0 0 100%; /* impede de encolher */
+        height: 60vh;
+        scroll-snap-align: start;
+        width: 20%; /* 5 vídeos lado a lado */
+        padding-inline: 5px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
 }
 
