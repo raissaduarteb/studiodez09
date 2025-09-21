@@ -1,21 +1,24 @@
 function criarCarrossel(carouselSelector, cardSelector, intervalTime = 2000, qtyVideo = 3) {
-    const track = document.querySelector(`${carouselSelector} .carousel-track`);
-    const cards = document.querySelectorAll(`${carouselSelector} ${cardSelector}`);
+    const carousel = document.querySelector(carouselSelector); // container com overflow-x
+    const track = carousel.querySelector('.carousel-track');
+    const cards = carousel.querySelectorAll(cardSelector);
     const cardWidth = cards[0].offsetWidth;
-    console.log(cardWidth);
     let index = 0;
     let videoTocando = false;
     let intervaloCarrossel = setInterval(slide, intervalTime);
 
     function slide() {
         index++;
-        if (index > cards.length - qtyVideo) { // ajuste para quantos vídeos mostrar
+        if (index > cards.length - qtyVideo) {
             index = 0;
         }
-        track.style.transform = `translateX(${-index * cardWidth}px)`;
+        track.scrollTo({
+            left: index * cardWidth,
+            behavior: 'smooth'
+        });
     }
 
-    // hover nos cards
+    // pausa quando passar o mouse
     cards.forEach(card => {
         card.addEventListener('mouseover', () => clearInterval(intervaloCarrossel));
         card.addEventListener('mouseleave', () => {
@@ -25,8 +28,8 @@ function criarCarrossel(carouselSelector, cardSelector, intervalTime = 2000, qty
         });
     });
 
-    // YouTube API
-    cards.forEach((card, i) => {
+    // pausa quando vídeo do YouTube toca
+    cards.forEach(card => {
         const iframe = card.querySelector('iframe');
         new YT.Player(iframe.id, {
             events: {
@@ -36,6 +39,7 @@ function criarCarrossel(carouselSelector, cardSelector, intervalTime = 2000, qty
                         clearInterval(intervaloCarrossel);
                     } else if (event.data === YT.PlayerState.PAUSED || event.data === YT.PlayerState.ENDED) {
                         videoTocando = false;
+                        // intervaloCarrossel = setInterval(slide, intervalTime);
                     }
                 }
             }
@@ -45,6 +49,6 @@ function criarCarrossel(carouselSelector, cardSelector, intervalTime = 2000, qty
 
 // Chamando a função para cada carrossel
 function onYouTubeIframeAPIReady() {
-    // criarCarrossel('.carousel1', '.video-card1', 2000, 3);
+    criarCarrossel('.carousel1', '.video-card1', 2000, 3);
     criarCarrossel('.carousel2', '.video-card2', 3000, 5);
 }
