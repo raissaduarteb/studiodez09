@@ -11,7 +11,7 @@
     background-color: #1B1919;
     position: relative;
     background-image: url(/images/background2.png);
-    padding: 0 8vw;
+    padding-left:8vw;
 
     
 }
@@ -53,13 +53,18 @@
 .maisrecentes, .recorrentes{
     padding-bottom: 10rem;
 }
+.recorrentes{
+    padding-right: 8vw;
+}
 .recorrentes-top, .maisrecentes-top{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 2vh;
+    padding-right: 8vw;
 }
+
 .setas{
     display: flex;
 }
