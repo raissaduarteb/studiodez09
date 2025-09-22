@@ -125,7 +125,24 @@
         scroll-snap-align: start;
         width: 20%; /* 5 vídeos lado a lado */
         padding-inline: 5px;
-        transition: transform 0.3s ease, opacity 0.3s ease;
+        transition: transform 0.3s ease;
+    }
+    .video-card1:hover {
+        transform: scale(1.1);
+        z-index: 2;
+    }
+    
+    .carousel:hover .video-card1:not(:hover) {
+        opacity: 1;
+    }
+    
+    .video-card2:hover {
+        transform: scale(1.1);
+        z-index: 2;
+    }
+    
+    .carousel:hover .video-card2:not(:hover) {
+        opacity: 1;
     }
 }
 
