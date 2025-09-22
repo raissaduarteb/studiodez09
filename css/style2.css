@@ -48,6 +48,7 @@
     width: 20%; /* 5 vídeos lado a lado */
     padding-inline: 5px;
     transition: transform 0.3s ease, opacity 0.3s ease;
+    overflow-y:hidden;
 }
     
 .maisrecentes, .recorrentes{
@@ -144,5 +145,8 @@
     .carousel:hover .video-card2:not(:hover) {
         opacity: 1;
     }
+    .carousel-track:hover .video-card1 {
+        filter: brightness(1);
+      }
 }
 
