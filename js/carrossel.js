@@ -76,15 +76,33 @@ function onYouTubeIframeAPIReady() {
     // criarCarrossel('.carousel2', '.video-card2', 3000, 5);
 }
 
-document.querySelectorAll(".video-wrapper").forEach(wrapper => {
-    wrapper.addEventListener("click", () => {
-      const id = wrapper.dataset.id;
-      wrapper.innerHTML = `
-        <iframe style="width: 35%;height:50vh;border-radius: 8px;" src="https://www.youtube.com/embed/${id}?autoplay=1&controls=0&modestbranding=1&rel=0"
-                frameborder="0"
-                allow="autoplay; encrypted-media"
-                allowfullscreen>
-        </iframe>
+
+
+
+
+function initVideoCards() {
+    document.querySelectorAll(".video-card1, .video-card2").forEach(card => {
+      const videoId = card.dataset.id;
+      if (!videoId) return;
+  
+      // cria thumbnail + botão
+      card.innerHTML = `
+        <img src="https://img.youtube.com/vi/${videoId}/hqdefault.jpg" alt="Thumb do vídeo">
+        <div class="play-button"></div>
       `;
+  
+      // ao clicar → substitui pelo iframe
+      card.addEventListener("click", () => {
+        card.innerHTML = `
+          <iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1&controls=0&modestbranding=1&rel=0"
+                  frameborder="0"
+                  allow="autoplay; encrypted-media"
+                  allowfullscreen>
+          </iframe>
+        `;
+      });
     });
-  });
+  }
+  
+  // inicializa ao carregar
+  document.addEventListener("DOMContentLoaded", initVideoCards);

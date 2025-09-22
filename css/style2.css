@@ -39,9 +39,17 @@
      
 .video-card1 {
     flex: 0 0 33.33%; /* 3 vídeos por vez */
-    /* padding-inline: 5px; */
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    /* transition: transform 0.3s ease, opacity 0.3s ease; */
+    position: relative;
+
 }
+.video-card1 img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+  }
 
 .video-card2 {
     flex: 0 0 auto; /* impede de encolher */
@@ -51,7 +59,15 @@
     padding-inline: 5px;
     transition: transform 0.3s ease, opacity 0.3s ease;
     overflow-y:hidden;
+    position: relative;
 }
+.video-card2 img {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+  }
     
 .maisrecentes, .recorrentes{
     padding-bottom: 10rem;
