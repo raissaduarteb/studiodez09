@@ -75,3 +75,16 @@ function onYouTubeIframeAPIReady() {
     // criarCarrossel('.carousel1', '.video-card1', 2000, 3);
     // criarCarrossel('.carousel2', '.video-card2', 3000, 5);
 }
+
+document.querySelectorAll(".video-wrapper").forEach(wrapper => {
+    wrapper.addEventListener("click", () => {
+      const id = wrapper.dataset.id;
+      wrapper.innerHTML = `
+        <iframe src="https://www.youtube.com/embed/${id}?autoplay=1&controls=0&modestbranding=1&rel=0"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen>
+        </iframe>
+      `;
+    });
+  });
