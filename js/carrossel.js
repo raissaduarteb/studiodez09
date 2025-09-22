@@ -80,7 +80,7 @@ document.querySelectorAll(".video-wrapper").forEach(wrapper => {
     wrapper.addEventListener("click", () => {
       const id = wrapper.dataset.id;
       wrapper.innerHTML = `
-        <iframe src="https://www.youtube.com/embed/${id}?autoplay=1&controls=0&modestbranding=1&rel=0"
+        <iframe style="width: 35%;height:50vh;border-radius: 8px;" src="https://www.youtube.com/embed/${id}?autoplay=1&controls=0&modestbranding=1&rel=0"
                 frameborder="0"
                 allow="autoplay; encrypted-media"
                 allowfullscreen>
