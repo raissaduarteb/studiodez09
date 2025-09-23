@@ -81,7 +81,7 @@
   }
     
 .maisrecentes, .recorrentes{
-    padding-bottom: 10rem;
+    padding-bottom: 5rem;
 }
 
 .recorrentes-top, .maisrecentes-top{
@@ -108,6 +108,7 @@
 }
     
 .setas svg{
+    color: white;
 
     display: inherit;
 

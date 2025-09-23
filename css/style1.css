@@ -359,7 +359,7 @@ body{
     gap: 0.5rem;
 }
 .setas svg{
-    color: white;
+    color: rgb(40, 39, 39);
     cursor: pointer;
     display: none;
 
@@ -399,7 +399,7 @@ footer{
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 5px;
+    gap: 4px;
 }
 .footer-text{
     font-size: 0.8rem;
@@ -565,14 +565,14 @@ footer{
     }
     .footer-middle-icon {
         margin-top: 0;
-        gap: 0.5rem;
+        gap: 0.3rem;
     }
     .footer-middle-icon a{
         width: 30px;
         height: 30px;
     }
     .footer-text{
-        font-size: 0.6rem;
+        font-size: 0.7rem;
     }
     footer{
         padding-inline: 8vw;
