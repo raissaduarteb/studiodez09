@@ -102,13 +102,27 @@ function initVideoCards() {
 
     // Substitui por iframe ao clicar
     card.addEventListener("click", () => {
-      card.innerHTML = `
-        <iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1&controls=0&modestbranding=1&rel=0"
-                frameborder="0"
-                allow="autoplay; encrypted-media"
-                allowfullscreen>
-        </iframe>
-      `;
+        card.innerHTML = ""; // limpa o conteúdo
+
+        // cria iframe dinamicamente
+        const iframe = document.createElement("iframe");
+        const iframeId = `yt-${videoId}-${Date.now()}`; // id único
+        iframe.id = iframeId;
+        iframe.src = `https://www.youtube.com/embed/${videoId}?enablejsapi=1&controls=0&modestbranding=1&rel=0`;
+        iframe.frameBorder = "0";
+        iframe.allow = "autoplay; encrypted-media";
+        iframe.allowFullscreen = true;
+        iframe.style.width = "100%";
+        iframe.style.height = isWide ? "230px" : "60vh";
+
+        card.appendChild(iframe);
+
+        // cria o player e dá play no clique (funciona no mobile)
+        new YT.Player(iframeId, {
+            events: {
+            'onReady': e => e.target.playVideo()
+            }
+        });
     });
   });
 }
