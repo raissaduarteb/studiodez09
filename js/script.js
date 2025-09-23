@@ -19,7 +19,7 @@ setTimeout(() => {
   const navLinks = document.querySelectorAll(".header-nav li a");
   console.log(navLinks)
   navLinks.forEach(link => {
-    const linkPage = link.getAttribute("href");
+    const linkPage = link.getAttribute("href").replaceAll('/', '');
     console.log(linkPage);
     if (linkPage === currentPage) {
       link.parentElement.classList.add("active");
