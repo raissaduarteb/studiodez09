@@ -175,13 +175,22 @@ body{
 }
 .video-card2 {
     flex: 0 0 auto; /* impede de encolher */
-    height: 55vh;
+    height: 60vh;
     scroll-snap-align: start;
     width: 20%; /* 5 vídeos lado a lado */
     padding-inline: 5px;
     transition: transform 0.3s ease, opacity 0.3s ease;
     overflow-y:hidden;
     position: relative;
+}
+.video-card2:hover {
+    transform: scale(1.03);
+    z-index: 2;
+}
+
+.carousel:hover .video-card2:not(:hover) {
+    filter: brightness(0.5);
+    transition: 0.7s;
 }
 .video-card2 img {
     width: 100%;
@@ -313,7 +322,6 @@ body{
     flex-direction: row;
     overflow-x: auto;   /* ativa o scroll horizontal */
     scroll-snap-type: x mandatory; /* deslize suave */
-    gap: 0.5rem;
     transition: 4s;
     scrollbar-width: none;   /* Firefox */
 }

@@ -27,6 +27,7 @@
     overflow: hidden;
     width: 100%;
     position: relative;
+
 }
     
 .carousel-track {
@@ -35,12 +36,14 @@
     overflow-x: auto;
     overflow-y:hidden;
 
+
 }
      
 .video-card1 {
     flex: 0 0 33.33%; /* 3 vídeos por vez */
-    /* transition: transform 0.3s ease, opacity 0.3s ease; */
     position: relative;
+    overflow-y:hidden;
+    padding-inline: 5px;
 
 }
 .video-card1 img {
@@ -51,6 +54,7 @@
     object-position: center; /* centraliza o corte */
     border-radius: 6px;
     display: block;
+
 }
 .video-card1 iframe {
     width: 100%;
@@ -117,10 +121,6 @@
     opacity: 0.4;
 }
 
-.video-card2:hover {
-    transform: scale(1.1);
-    z-index: 2;
-}
 
 .carousel:hover .video-card2:not(:hover) {
     opacity: 0.4;
@@ -163,7 +163,9 @@
     .carousel1{
         width: 110%;
     }
-
+    .video-card1 img{
+        height: 145px;
+    }
 }
 
 
