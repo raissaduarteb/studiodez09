@@ -6,6 +6,8 @@
     <title>Studio Dez09</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -19,15 +21,15 @@
     <main>
         <div class="background-header">
             <div class="text-header">
-                <h1 class="titulo-header">STUDIO DEZ09</h1>
-                <h3 class="titulo-parag">Na Studio Dez09, cada vídeo é mais que imagem: é emoção, música e narrativa. Transformamos ideias em histórias que conectam pessoas e ficam na memória.</h3>
+                <h1 class="titulo-header" data-aos="fade-up">STUDIO DEZ09</h1>
+                <h3 class="titulo-parag"data-aos="fade-up">Na Studio Dez09, cada vídeo é mais que imagem: é emoção, música e narrativa. Transformamos ideias em histórias que conectam pessoas e ficam na memória.</h3>
             </div>
-            <div class="button-header">
+            <div class="button-header" data-aos="fade-up">
                 <a href="./projetos.html"><button class="btn button-projetos" type="button">Ver projetos</button></a>
             </div>
         </div>
         <div class="content">
-            <div class="sobre content1">
+            <div class="sobre content1" data-aos="fade-left">
                 <img class="img1" src="./images/img1.jpg" alt="imagem de um estúdio">
                 <div>
                     <h1 class="titulo white-titulo responsive-titulo1">
@@ -46,7 +48,7 @@
                     </div>
                 </div>
             </div>
-            <div class="sobre content2">
+            <div class="sobre content2" data-aos="fade-right">
                 <img class="img2" src="./images/img1.jpg" alt="imagem de um estúdio">
                 <div class="text-content2">
                     <h1 class="titulo dark-titulo responsive-titulo2">
@@ -65,15 +67,15 @@
                 </div>
             </div>
 
-            <div class="videodestaque">
+            <div class="videodestaque" data-aos="fade-down">
                 <iframe src="https://www.youtube.com/embed/YPvHIV7sKFE" title="YouTube video player" frameborder="0"allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
-                <div class="legendavideo">
+                <div class="legendavideo" data-aos-duration="5000" data-aos="fade-left">
                     <h1 class="titulo white-titulo peq-t">MUITO ALÉM DE IMAGENS:</h1>
                     <p class="parag white-parag peq-p">Criamos experiências em vídeo.</p>
                 </div>
             </div>
         </div>
-        <div class="clients">
+        <div class="clients" data-aos="fade-left">
             <div class="clients-top">
                 <h1 class="titulo dark-titulo clients-titulo">NOSSOS <strong style="color: #ED3D1A;">CLIENTES</strong></h1>
                 <div class="setas" id="setas" for="carousel2">
@@ -103,6 +105,14 @@
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="./js/setas.js"></script>
     <script src="./js/carrossel.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+          duration: 1500,
+          once: true     
+        });
+      </script>
+
 
 </body>
 </html>
