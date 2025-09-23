@@ -12,6 +12,7 @@ fetch('footer.html')
 
 // Pega o caminho da URL atual
 const currentPage = window.location.pathname.split("/").pop();
+console.log(currentPage);
 
 // Seleciona todos os links do navbar
 setTimeout(() => {
@@ -19,7 +20,7 @@ setTimeout(() => {
   console.log(navLinks)
   navLinks.forEach(link => {
     const linkPage = link.getAttribute("href");
-
+    console.log(linkPage);
     if (linkPage === currentPage) {
       link.parentElement.classList.add("active");
     }
