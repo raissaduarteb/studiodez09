@@ -575,7 +575,8 @@ footer{
   }
   @media (max-width: 500px) {
     .carousel-track iframe {
-        width: 50%; /* 2 vídeos ocupando 100% */
+        width: 100%; /* 2 vídeos ocupando 100% */
+        height: 100%;
       }
     .clients-top{
         gap: 1rem;
