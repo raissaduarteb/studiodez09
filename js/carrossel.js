@@ -85,24 +85,32 @@ function initVideoCards() {
       const videoId = card.dataset.id;
       if (!videoId) return;
   
-      // cria thumbnail + botão
+      const isWide = card.classList.contains("video-card1");
+
+    // Escolhe altura e thumbnail adequadas
+    const thumb = isWide
+      ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
+      : `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+
+    // Gera imagem + botão play
+    card.innerHTML = `
+      <img src="${thumb}" 
+           onerror="this.onerror=null;this.src='https://img.youtube.com/vi/${videoId}/hqdefault.jpg';"
+           alt="Thumb do vídeo">
+      <div class="play-button"></div>
+    `;
+
+    // Substitui por iframe ao clicar
+    card.addEventListener("click", () => {
       card.innerHTML = `
-        <img src="https://img.youtube.com/vi/${videoId}/hqdefault.jpg" alt="Thumb do vídeo">
-        <div class="play-button"></div>
+        <iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1&controls=0&modestbranding=1&rel=0"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen>
+        </iframe>
       `;
-  
-      // ao clicar → substitui pelo iframe
-      card.addEventListener("click", () => {
-        card.innerHTML = `
-          <iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1&controls=0&modestbranding=1&rel=0"
-                  frameborder="0"
-                  allow="autoplay; encrypted-media"
-                  allowfullscreen>
-          </iframe>
-        `;
-      });
     });
-  }
-  
-  // inicializa ao carregar
-  document.addEventListener("DOMContentLoaded", initVideoCards);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", initVideoCards);
