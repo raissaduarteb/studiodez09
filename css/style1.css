@@ -439,6 +439,17 @@ footer{
     height: auto;
 }
 
+@media (min-height: 1000px) {
+    .legendavideo{
+        height: 41vh;
+    }
+}
+@media (min-height: 1100px) {
+    .legendavideo{
+        height: 44vh;
+    }
+}
+
 @media (max-width: 992px) {
     header{
         width: 70%;
