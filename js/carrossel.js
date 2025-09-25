@@ -14,12 +14,12 @@ function criarCarrossel(carouselSelector, cardSelector, intervalTime = 2000, qty
         }
         track.scrollTo({
             left: index * cardWidth,
-            behavior: 'smooth'
+            behavior: 'smooth',
         });
     }
 
     // pausa quando passar o mouse
-    cards.forEach(card => {
+    cards.forEach((card) => {
         card.addEventListener('mouseover', () => clearInterval(intervaloCarrossel));
         card.addEventListener('mouseleave', () => {
             if (!videoTocando) {
@@ -29,11 +29,11 @@ function criarCarrossel(carouselSelector, cardSelector, intervalTime = 2000, qty
     });
 
     // pausa quando vídeo do YouTube toca
-    cards.forEach(card => {
+    cards.forEach((card) => {
         const iframe = card.querySelector('iframe');
         new YT.Player(iframe.id, {
             events: {
-                'onStateChange': event => {
+                onStateChange: (event) => {
                     if (event.data === YT.PlayerState.PLAYING) {
                         videoTocando = true;
                         clearInterval(intervaloCarrossel);
@@ -41,30 +41,35 @@ function criarCarrossel(carouselSelector, cardSelector, intervalTime = 2000, qty
                         videoTocando = false;
                         // intervaloCarrossel = setInterval(slide, intervalTime);
                     }
-                }
-            }
+                },
+            },
         });
     });
 
     const divSetas = document.querySelectorAll('.setas');
 
-    divSetas.forEach(divSeta => {
+    divSetas.forEach((divSeta) => {
         const attrFor = divSeta.getAttribute(`for`);
 
         if (`.${attrFor}` == carouselSelector) {
             const setas = divSeta.querySelectorAll(`svg`);
 
             setas[0].addEventListener('click', () => {
+                console.log(track.clientWidth);
                 track.scrollBy({ left: -track.clientWidth, behavior: 'smooth' });
-                console.log(intervaloCarrossel)
+                console.log(intervaloCarrossel);
                 clearInterval(intervaloCarrossel);
-                setTimeout(() => { intervaloCarrossel = setInterval(slide, intervalTime) }, 10000); 
+                setTimeout(() => {
+                    intervaloCarrossel = setInterval(slide, intervalTime);
+                }, 10000);
             });
 
             setas[1].addEventListener('click', () => {
                 track.scrollBy({ left: track.clientWidth, behavior: 'smooth' });
                 clearInterval(intervaloCarrossel);
-                setTimeout(() => { intervaloCarrossel = setInterval(slide, intervalTime) }, 10000); 
+                setTimeout(() => {
+                    intervaloCarrossel = setInterval(slide, intervalTime);
+                }, 10000);
             });
         }
     });
@@ -76,55 +81,49 @@ function onYouTubeIframeAPIReady() {
     // criarCarrossel('.carousel2', '.video-card2', 3000, 5);
 }
 
-
-
-
-
 function initVideoCards() {
-    document.querySelectorAll(".video-card1, .video-card2").forEach(card => {
-      const videoId = card.dataset.id;
-      if (!videoId) return;
-  
-      const isWide = card.classList.contains("video-card1");
+    document.querySelectorAll('.video-card1, .video-card2').forEach((card) => {
+        const videoId = card.dataset.id;
+        if (!videoId) return;
 
-    // Escolhe altura e thumbnail adequadas
-    const thumb = isWide
-      ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
-      : `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+        const isWide = card.classList.contains('video-card1');
 
-    // Gera imagem + botão play
-    card.innerHTML = `
+        // Escolhe altura e thumbnail adequadas
+        const thumb = isWide ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg` : `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+
+        // Gera imagem + botão play
+        card.innerHTML = `
       <img src="${thumb}" 
            onerror="this.onerror=null;this.src='https://img.youtube.com/vi/${videoId}/hqdefault.jpg';"
            alt="Thumb do vídeo">
       <div class="play-button"></div>
     `;
 
-    // Substitui por iframe ao clicar
-    card.addEventListener("click", () => {
-        card.innerHTML = ""; // limpa o conteúdo
+        // Substitui por iframe ao clicar
+        card.addEventListener('click', () => {
+            card.innerHTML = ''; // limpa o conteúdo
 
-        // cria iframe dinamicamente
-        const iframe = document.createElement("iframe");
-        const iframeId = `yt-${videoId}-${Date.now()}`; // id único
-        iframe.id = iframeId;
-        iframe.src = `https://www.youtube.com/embed/${videoId}?enablejsapi=1&controls=0&modestbranding=1&rel=0`;
-        iframe.frameBorder = "0";
-        iframe.allow = "autoplay; encrypted-media";
-        iframe.allowFullscreen = true;
-        iframe.style.width = "100%";
-        iframe.style.height = isWide ? "230px" : "60vh";
+            // cria iframe dinamicamente
+            const iframe = document.createElement('iframe');
+            const iframeId = `yt-${videoId}-${Date.now()}`; // id único
+            iframe.id = iframeId;
+            iframe.src = `https://www.youtube.com/embed/${videoId}?enablejsapi=1&controls=0&modestbranding=1&rel=0`;
+            iframe.frameBorder = '0';
+            iframe.allow = 'autoplay; encrypted-media';
+            iframe.allowFullscreen = true;
+            iframe.style.width = '100%';
+            iframe.style.height = isWide ? '230px' : '60vh';
 
-        card.appendChild(iframe);
+            card.appendChild(iframe);
 
-        // cria o player e dá play no clique (funciona no mobile)
-        new YT.Player(iframeId, {
-            events: {
-            'onReady': e => e.target.playVideo()
-            }
+            // cria o player e dá play no clique (funciona no mobile)
+            new YT.Player(iframeId, {
+                events: {
+                    onReady: (e) => e.target.playVideo(),
+                },
+            });
         });
     });
-  });
 }
 
-document.addEventListener("DOMContentLoaded", initVideoCards);
+document.addEventListener('DOMContentLoaded', initVideoCards);
